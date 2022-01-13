@@ -16,8 +16,14 @@ function App() {
     end: new Date()
   });
 
-  
-  useEffect(() => console.log(likedImages), [,likedImages]);
+  useEffect(() => {
+    localStorage.getItem("likedImages") && setLikedImages(
+      JSON.parse(localStorage.getItem("likedImages"))
+    )
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("likedImages", JSON.stringify(likedImages))
+  }, [likedImages]);
 
   const tabs = [
     {
