@@ -8,16 +8,22 @@ function App() {
 
   const [likedImages, setLikedImages] = useState([]);
 
+  //Selected Date takes object {start: Date, end: Date}
+  //To keep it having one date, I always change both the start and end at the same time to be the same thing
+  //It is always initialized to have the date on project load to be the current date
   const [selectedDate, setSelectedDate] = useState({
     start: new Date(),
     end: new Date()
   });
 
+  //On Project load, this loads the array of liked images from localStorage
   useEffect(() => {
     localStorage.getItem("likedImages") && setLikedImages(
       JSON.parse(localStorage.getItem("likedImages"))
     )
   }, []);
+
+  //Whenever the likedImages array is updated, this updates the array stored in localStorage
   useEffect(() => {
     localStorage.setItem("likedImages", JSON.stringify(likedImages))
   }, [likedImages]);

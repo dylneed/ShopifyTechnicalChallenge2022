@@ -11,11 +11,15 @@ function Home({selectedDate, setSelectedDate, likedImages, setLikedImages}) {
     year: selectedDate.start.getFullYear(),
   })
 
+  //Grabs the array of objects from nasa's EPIC API, and saves that to the images const 
   const fetchImages = async () => {
     try {
+      //Clears images, so that loading screen appears
       setImages();
+      //Creates the url needed for the API call
       let dateString = selectedDate.start.toISOString().split("T")[0]
       let url = "https://api.nasa.gov/EPIC/api/enhanced/date/" + dateString + "?api_key=" + api_key;
+      //Makes the API call and sends the array to images
       fetch(url, {method:"GET"})
         .then(response => {return response.json();})
         .then(data => {setImages(data)})
@@ -24,8 +28,8 @@ function Home({selectedDate, setSelectedDate, likedImages, setLikedImages}) {
     }
   }
 
+  //On app load, and whenever the selectedDate changes, make a new API call to get the images
   useEffect(() => fetchImages(), [,selectedDate]);
-  useEffect(() => console.log(images),[,images]);
 
   return (
     <>

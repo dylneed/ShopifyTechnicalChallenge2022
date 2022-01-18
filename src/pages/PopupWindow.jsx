@@ -50,6 +50,7 @@ function PopupWindow({image, setImage}) {
             src={
               image && 
               "https://api.nasa.gov/EPIC/archive/enhanced/" +
+              //Date formatted for the api call
               image.date.slice(0,4) + "/" +
               image.date.slice(5,7) + "/" +
               image.date.slice(8,10) + "/png/" +

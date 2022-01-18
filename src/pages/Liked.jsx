@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import {MediaCard, Layout, Spinner} from '@shopify/polaris';
+import React from 'react';
 import PhotoCards from './PhotoCards.jsx';
-let api_key = "qad1lSJeLRQHoMp2bhrgzAfBUJ6e6GbR2egkGlC5";
 
 function Liked({likedImages, setLikedImages}) {
   return (
