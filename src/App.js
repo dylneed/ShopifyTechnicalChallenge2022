@@ -43,7 +43,22 @@ function App() {
         <Page
           fullWidth
           title="Images from EPIC"
-          subtitle="These images were captured by DSCOVR's Earth Polychromatic Imaging Camera"
+          // subtitle="These images were captured by DSCOVR's Earth Polychromatic Imaging Camera"
+          subtitle={
+            <>
+              <p>
+                These images were captured by DSCOVR's Earth Polychromatic Imaging Camera.
+                The link for the GitHub Repo can be found {" "}
+                <a
+                  href="https://github.com/dylneed/ShopifyTechnicalChallenge2022"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  here
+                </a>.
+              </p>
+            </>
+          }
         >
           <Tabs tabs={tabs} selected={selected} onSelect={setSelected}>
             {tabs[selected].id === "Home" && (
