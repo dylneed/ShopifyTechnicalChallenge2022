@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {DatePicker, MediaCard, Layout, Spinner} from '@shopify/polaris';
+import {DatePicker, Layout} from '@shopify/polaris';
 import PhotoCards from './PhotoCards.jsx';
 let api_key = "qad1lSJeLRQHoMp2bhrgzAfBUJ6e6GbR2egkGlC5";
 

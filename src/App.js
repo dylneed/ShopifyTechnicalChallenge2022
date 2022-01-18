@@ -1,6 +1,3 @@
-//https://docs.google.com/document/d/13zXpyrC2yGxoLXKktxw2VJG2Jw8SdUfliLM-bYQLjqE/edit#
-//https://api.nasa.gov (I quite like EPIC)
-//NASA API Key: qad1lSJeLRQHoMp2bhrgzAfBUJ6e6GbR2egkGlC5
 import Home from './pages/Home.jsx';
 import Liked from './pages/Liked.jsx';
 import React, {useState, useEffect} from 'react';
