@@ -43,7 +43,6 @@ function App() {
         <Page
           fullWidth
           title="Images from EPIC"
-          // subtitle="These images were captured by DSCOVR's Earth Polychromatic Imaging Camera"
           subtitle={
             <>
               <p>
